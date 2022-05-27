@@ -256,7 +256,7 @@ src/Acme.Retail.BookStore.Web/Logs/*
 src/Acme.Retail.BookStore.Web.Host/Logs/*
 src/Acme.Retail.BookStore.IdentityServer/Logs/*
 src/Acme.Retail.BookStore.HttpApi.Host/Logs/*
-src/Acme.Retail.BookStore.HttpApi.Host/Logs/*
+src/Acme.Retail.BookStore.HttpApi.HostWithIds/Logs/*
 src/Acme.Retail.BookStore.DbMigrator/Logs/*
 src/Acme.Retail.BookStore.Blazor.Server/Logs/*
 src/Acme.Retail.BookStore.Blazor.Server.Tiered/Logs/*

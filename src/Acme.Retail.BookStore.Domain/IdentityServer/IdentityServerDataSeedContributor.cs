@@ -162,25 +162,6 @@ public class IdentityServerDataSeedContributor : IDataSeedContributor, ITransien
         }
 
 
-        // Blazor Client
-        var blazorClientId = configurationSection["BookStore_Blazor:ClientId"];
-        if (!blazorClientId.IsNullOrWhiteSpace())
-        {
-            var blazorRootUrl = configurationSection["BookStore_Blazor:RootUrl"].TrimEnd('/');
-
-            await CreateClientAsync(
-                name: blazorClientId,
-                scopes: commonScopes,
-                grantTypes: new[] { "authorization_code" },
-                secret: configurationSection["BookStore_Blazor:ClientSecret"]?.Sha256(),
-                requireClientSecret: false,
-                redirectUri: $"{blazorRootUrl}/authentication/login-callback",
-                postLogoutRedirectUri: $"{blazorRootUrl}/authentication/logout-callback",
-                corsOrigins: new[] { blazorRootUrl.RemovePostFix("/") }
-            );
-        }
-
-
 
         // Swagger Client
         var swaggerClientId = configurationSection["BookStore_Swagger:ClientId"];
